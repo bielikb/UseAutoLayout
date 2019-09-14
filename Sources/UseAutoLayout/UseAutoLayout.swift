@@ -1,11 +1,6 @@
-# @UseAutoLayout
-Property wrapper that enables autolayout on applied views.
+#if canImport(UIKit)
+import UIKit
 
-# Declaration:
-
-`@UseAutoLayout` property wrapper
-
-```
 @propertyWrapper
 public struct UseAutoLayout<T: UIView> {
     var value: T
@@ -19,19 +14,4 @@ public struct UseAutoLayout<T: UIView> {
       value = wrappedValue
     }
 }
-
-```
-
-# Usage
-
-```
-@UseAutoLayout var label = UILabel()
-```
-
-# Example
-
-![Sample](assets/autolayout-1.png)
-
----
-
-![](assets/autolayout-2.png)
+#endif
