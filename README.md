@@ -37,12 +37,11 @@ Using @UseAutoLayout requires Xcode 11.0(and above) and Swift 5.1 toolchain
 
 ### Swift Package Manager
 
-Add `.package(url: "https://github.com/bielikb/UseAutoLayout.git", from: "1.0.0")` to your
-`Package.swift` file's `dependencies`.
+Add 
+`.package(url: "https://github.com/bielikb/UseAutoLayout.git", from: "1.0.0")` 
+to your `Package.swift` file's `dependencies`.
 
-If youre using Xcode 11.0, add this Swift Package to your target(s).
-
-——-
+If youre using Xcode 11.0 add this Swift Package to your target(s) using Xcode.
 
 # Example
 
