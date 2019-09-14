@@ -8,18 +8,21 @@ Property wrapper that enables autolayout on applied views.
 ```
 @propertyWrapper
 public struct UseAutoLayout<T: UIView> {
-    var value: T
-
     public var wrappedValue: T {
-      get { return value }
-      set { self.value.translatesAutoresizingMaskIntoConstraints = false }
+        didSet {
+            setAutoLayout()
+        }
     }
 
     public init(wrappedValue: T) {
-      value = wrappedValue
+        self.wrappedValue = wrappedValue
+        setAutoLayout()
+    }
+
+    func setAutoLayout() {
+        wrappedValue.translatesAutoresizingMaskIntoConstraints = false
     }
 }
-
 ```
 
 # Usage
