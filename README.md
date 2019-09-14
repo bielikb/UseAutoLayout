@@ -28,6 +28,22 @@ public struct UseAutoLayout<T: UIView> {
 @UseAutoLayout var label = UILabel()
 ```
 
+
+## Installation
+
+Property wrappers are defined in Swift 5.1.
+Using @UseAutoLayout requires Xcode 11.0(and above) and Swift 5.1 toolchain
+
+
+### Swift Package Manager
+
+Add `.package(url: "https://github.com/bielikb/UseAutoLayout.git", from: "1.0.0")` to your
+`Package.swift` file's `dependencies`.
+
+If youre using Xcode 11.0, add this Swift Package to your target(s).
+
+——-
+
 # Example
 
 ![Sample](assets/autolayout-1.png)
