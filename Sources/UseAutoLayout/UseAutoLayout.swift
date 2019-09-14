@@ -3,15 +3,14 @@ import UIKit
 
 @propertyWrapper
 public struct UseAutoLayout<T: UIView> {
-    var value: T
-
-    public var wrappedValue: T {
-      get { return value }
-      set { self.value.translatesAutoresizingMaskIntoConstraints = false }
+    var wrappedValue: T {
+        didSet {
+            self.wrappedValue.translatesAutoresizingMaskIntoConstraints = false
+        }
     }
 
     public init(wrappedValue: T) {
-      value = wrappedValue
+      self.wrappedValue = wrappedValue
     }
 }
 #endif
